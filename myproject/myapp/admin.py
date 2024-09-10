@@ -5,8 +5,9 @@ from django.contrib.auth.admin import UserAdmin
 # Register your models here.
 
 # Unregister the provided model admin:
-
 admin.site.unregister(User)
 @admin.register(User)
 class NewAdmin(UserAdmin):
-    pass
+    readonly_fields = [
+        'date_joined',
+    ]
