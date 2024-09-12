@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
+from .models import Person
 
 # Register your models here.
 
@@ -21,3 +22,4 @@ def get_form(self, request, obj=None, **kwargs):
         
         return form
     
+admin.site.register(Person)
