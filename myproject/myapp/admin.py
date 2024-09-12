@@ -14,7 +14,7 @@ class NewAdmin(UserAdmin):
     ]
     
 def get_form(self, request, obj=None, **kwargs):
-    form = super().get_form(request, obj, **kwargs)
+    form = super().get_form(request, obj, **kwargs) # override get_form function to disable username field
     is_superuser = request.user.is_superuser
     
     if not is_superuser:
