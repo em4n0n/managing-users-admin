@@ -25,6 +25,4 @@ def get_form(self, request, obj=None, **kwargs):
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
     list_display = ("last_name", "first_name")
-    search_fields = ("first_name__startswith",)  
-    
-admin.site.register(Person)
+    search_fields = ("first_name__startswith",)
